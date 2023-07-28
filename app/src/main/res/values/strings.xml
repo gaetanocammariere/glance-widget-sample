@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GlanceSampleWidget</string>
+    <string name="app_widget_description">Widget that shows random images on tap</string>
+    <string name="refresh">refresh</string>
+</resources>
