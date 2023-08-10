@@ -144,16 +144,4 @@ class ImageWidget : GlanceAppWidget() {
     }
 }
 
-class RefreshAction : ActionCallback {
-    override suspend fun onAction(
-        context: Context,
-        glanceId: GlanceId,
-        parameters: ActionParameters
-    ) {
-        ImageWidget().update(context, glanceId)
 
-        GlanceAppWidgetManager(context).getAppWidgetSizes(glanceId).let { size ->
-            ImageWorker.enqueue(context, size.first(), glanceId, force = true)
-        }
-    }
-}
